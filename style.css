@@ -18,7 +18,7 @@ body {
     gap: 10px;
     align-items: center;
     position: sticky;
-    top:0;
+    top: 0;
     background-color: white;
     z-index: 1;
 }
@@ -57,25 +57,28 @@ body {
     align-items: center;
 
 }
+
 /* My Learning Popup*/
-.mylearning{
+.mylearning {
     position: relative;
     cursor: pointer;
 }
-.mylearning__popup{
+
+.mylearning__popup {
     position: absolute;
     background-color: white;
     border: black solid 2px;
     width: 100px;
-    top:150%;
-    padding:20px;
-    right:0;
+    top: 150%;
+    padding: 20px;
+    right: 0;
     display: none;
 }
 
-.mylearning:hover .mylearning__popup{
+.mylearning:hover .mylearning__popup {
     display: block;
 }
+
 .categories {
     display: flex;
     justify-content: space-around;
@@ -88,24 +91,51 @@ body {
     color: white;
     padding: 10px;
     border-radius: 30px;
+    cursor: pointer;
+    border-color: solid #A435f0 1px;
 
 }
-.sale-image{
+
+.categories p:hover {
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border-color: solid #A435f0 1px;
+}
+
+.sale-image {
     position: relative;
 }
 
 .sale-image img {
     width: 100%;
 }
-.sale-image__offer{
-    width:35% ;
-    background-color:rgb(252, 252, 45);
- 
+
+.sale-image__offer {
+    width: 35%;
+    background-color: rgb(252, 252, 45);
+
     border: black solid 2px;
     padding: 2%;
     position: absolute;
-    top:30%;
-    left:3%;
+    top: 30%;
+    left: 3%;
+    animation: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0% {
+        transition: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transition: scale(1);
+        opacity: 1;
+    }
 }
 
 .Recommended {
